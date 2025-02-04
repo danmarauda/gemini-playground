@@ -25,7 +25,7 @@ export async function generateMetadata({
       (preset) => preset.id === presetId
     );
     if (selectedPreset) {
-      title = `Gemini Multimodal Live Playground`;
+      title = `AskARA`;
       description = `Speak to a "${selectedPreset.name}" in a speech-to-speech playground for Gemini's new Multimodal Live API. Built on LiveKitAgents.`;
     }
   }
@@ -57,11 +57,9 @@ export default function Dashboard() {
       <header className="flex flex-col md:flex-row flex-shrink-0 gap-3 md:h-12 items-center justify-between px-5 py-8 w-full md:mx-auto">
         <div className="flex items-center gap-3">
           <LK />
-          <span className="h-8 border-r border-white/10"></span>
           <div className="flex gap-2 items-center">
-            <Gemini />
             <span className="text-[18px] pt-[3px] font-light">
-              Multimodal Live Playground
+              AskARA
             </span>
           </div>
         </div>

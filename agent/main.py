@@ -3,6 +3,7 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+import os
 from dataclasses import asdict, dataclass
 from typing import Any, Dict, List, cast
 
@@ -21,7 +22,11 @@ from livekit.agents import (
 from livekit.agents.multimodal import MultimodalAgent
 from livekit.plugins.google import beta as google
 
-load_dotenv(dotenv_path=".env.local")
+load_dotenv()  # Load .env file
+
+LIVEKIT_API_KEY = os.getenv('LIVEKIT_API_KEY')
+LIVEKIT_API_SECRET = os.getenv('LIVEKIT_API_SECRET')
+LIVEKIT_WS_URL = os.getenv('LIVEKIT_WS_URL')
 
 logger = logging.getLogger("gemini-playground")
 logger.setLevel(logging.INFO)
